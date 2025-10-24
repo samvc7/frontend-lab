@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# frontend-workbench
 
-## Getting Started
+**Description:** 
+A compact, production-style **web engineering lab** showcasing
+**React + TypeScript** components, runtime utilities, **Testing Library** and UI
+patterns/concepts. The goal is to practice accessible UI behaviors, performance
+techniques, and robust client logic—organized like real code you’d ship.
 
-First, run the development server:
+---
+
+## What’s inside
+
+- **`app/`**  
+  Next.js **App Router** routes and tiny demo pages that showcase components
+  and utilities in realistic contexts. Keep pages minimal.
+
+- **`components/`**  
+  Reusable UI units with **accessibility-first** behavior (roles, labels,
+  roving tabindex, keyboard, focus management). Prefer controlled APIs and
+  keep any data fetching outside.
+
+- **`hooks/`**  
+  Small, focused UI hooks (e.g., debounced value, keyboard navigation,
+  roving-focus helpers). Hooks should be side-effect aware and well-scoped.
+
+- **`utils/`**  
+  **Pure runtime helpers** (e.g. fetch with Abort + retry, window/virtualization
+  math, data transforms). No React imports; everything unit-testable.
+
+- **`*.test.ts files`**  
+  **Behavior-first** tests (Jest + Testing Library). Query by
+  role/name/label; assert visible behavior, not DOM structure.
+
+- **`notes/`**  
+  General, write-ups: *what / why / trade-offs* for patterns.
+  One markdown per topic exists too.
+
+---
+
+## Tech stack
+
+- **Framework:** Next.js
+- **UI runtime:** React, TypeScript
+- **Testing:** Jest, React Testing Library
+- **Styling:** Tailwind CSS, shadcn
+
+---
+
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm i
 pnpm dev
-# or
-bun dev
+pnpm test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## License
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT — use any pieces in your own projects.
